@@ -1,4 +1,5 @@
 function init() {
+  handlebarsSetup()
   //put any page initialization/handlebars initialization here
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = formTemplate
@@ -9,21 +10,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
 
-var recipe = {
-  description: 'yummy chicken noodle soup',
-  ingredients: [
-    {quantity: "1 cup", name: 'chicken'},
-    {quantity: "3 nanoliters", name: 'stock'},
-    {quantity: "12", name: 'noodles'}
-  ]
+Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("partial-template").innerHTML)
+function renderMain() {
+  var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  var html = template({description: 'recipeDescription', ingredients: 'ingredients'});
 }
 
 function createRecipe() {
 
-  var name = document.getElementById("name")
-  var description = document.getElementById("recipeDescription")
-  var ingredients = document.getElementById("ingredients")
+  var name = document.getElementById("name").value
+  var description = document.getElementById("recipeDescription").value
+  var ingredients = document.getElementById("ingredients").value
+  var recipe = {name, ingredients, description}
 
   document.getElementsByTagName("main")[0].innerHTML += template
-
 }
