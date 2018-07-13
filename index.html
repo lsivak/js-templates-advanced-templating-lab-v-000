@@ -31,6 +31,17 @@
 <script id="recipe-template" type="text/x-handlebars-template">
   {{> name }}
   <a href="#" onclick="displayEditForm();">Edit Recipe</a>
+  <form id="recipe-form" onsubmit="createRecipe();return false;">
+      Name: <input type="text" id="name"><br>
+      Description: <input type="text" id="recipeDescription"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      <input type="submit">
+    </form>
 </script>
   <script id="recipe-details-partial" type="text/x-handlebars-template">
 <div>
