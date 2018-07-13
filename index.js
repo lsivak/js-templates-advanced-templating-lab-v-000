@@ -22,7 +22,9 @@ Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-
 }
 
 function createRecipe() {
-
+  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  var template = recipeTemplate
+  
   var name = document.getElementById("name").value
   var description = document.getElementById("recipeDescription").value
   var ingredients = document.getElementById("ingredients").value
