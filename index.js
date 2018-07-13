@@ -7,11 +7,11 @@ function init() {
 
   function displayIngredient() {
     var ingredientsList = []
-for(var i=0; i<issues.length, i++){
+for(var i=0; i<issues.length, i++ {
   var result = template(ingredients[i]);
     document.getElementsByTagName("main")[0].innerHTML
     r=result
-}
+})
 }
     Handlebars.registerHelper('displayIngredient', function(ingredient) {
        return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
