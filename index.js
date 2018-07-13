@@ -46,4 +46,5 @@ function updateRecipe() {
 
 function displayEditForm() {
 Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
+debugger
 }
