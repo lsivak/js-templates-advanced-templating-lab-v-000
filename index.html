@@ -10,27 +10,32 @@
     <main id="main">
       <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
       <script src="index.js"></script>
+      
+      <script id="recipe-template" type="text/x-handlebars-template">
+        <article>
+        <p>{{name}}</p>
+      <div>{{>recipe-details-partial}}</div>
+        <a href="#" onclick="displayEditForm();">Edit Recipe</a>
+      </article>
+    </script>
 
-    <form id="recipe-form" onsubmit="createRecipe();return false;">
-        Name: <input type="text" id="name"><br>
-        Description: <input type="text" id="recipeDescription"><br>
-        Ingredients: <input type="text" id="ingredients"><br>
-        Ingredients: <input type="text" id="ingredients"><br>
-        Ingredients: <input type="text" id="ingredients"><br>
-        Ingredients: <input type="text" id="ingredients"><br>
-        Ingredients: <input type="text" id="ingredients"><br>
-        Ingredients: <input type="text" id="ingredients"><br>
-        <input type="submit">
-      </form>
+    <script id="recipe-details-partial" type="text/x-handlebars-template">
+  <div>
+    <p>{{name}}</p>
+    <p>{{description}}</p>
+    <ul>
+      {{#if ingredients.count}}
+      <li>{{#each ingredients}} Ingredients</li>
+    </ul>
+  </div>
+  </script>
 
       <script id="recipe-form-template" type="text/x-handlebars-template">
-        <div>
-          <p>{{name}}</p>
-        </div>
+        
+        
 </script>
-<script id="recipe-template" type="text/x-handlebars-template">
-  {{> name }}
-  <a href="#" onclick="displayEditForm();">Edit Recipe</a>
+
+
   <form id="recipe-form" onsubmit="createRecipe();return false;">
       Name: <input type="text" id="name"><br>
       Description: <input type="text" id="recipeDescription"><br>
@@ -42,16 +47,6 @@
       Ingredients: <input type="text" id="ingredients"><br>
       <input type="submit">
     </form>
-</script>
-  <script id="recipe-details-partial" type="text/x-handlebars-template">
-<div>
-  <p>{{name}}</p>
-  <p>{{description}}</p>
-  <ul>
-    {{#if ingredients.count}}
-    <li>{{#each displayIngredient}} Ingredients</li>
-  </ul>
-</div>
 </script>
     </main>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
