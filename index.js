@@ -8,7 +8,7 @@ function init() {
     Handlebars.registerHelper('showDescription', function(description) {
        return new Handlebars.SafeString('description="recipeDescription"')
      })
-    Handlebars.registerHelper('showIngredient', function(ingredient) {
+    Handlebars.registerHelper('displayIngredient', function(ingredient) {
        return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
      })
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
