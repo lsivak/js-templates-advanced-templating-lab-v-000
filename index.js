@@ -4,6 +4,11 @@ function init() {
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = formTemplate
 
+  var name = document.getElementById("name").value
+  var description = document.getElementById("recipeDescription").value
+  var ingredients = document.getElementById("ingredients").value
+  var recipe = {name, ingredients, description}
+
 debugger
   function renderIngredients() {
     Handlebars.registerHelper('displayIngredient', function(ingredient) {
