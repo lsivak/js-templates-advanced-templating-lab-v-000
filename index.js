@@ -8,7 +8,7 @@ function init() {
   function displayIngredient() {
 var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
 for(var i=0; i<issues.length, i++ {
-  var result = template(ingredients[i]));
+  var result = template(ingredients[i]);
     document.getElementsByTagName("main")[0].innerHTML
     r=result
 }
