@@ -45,7 +45,5 @@ function updateRecipe() {
 }
 
 function displayRecipeForm() {
-  var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  var template = formTemplate
-  return formTemplate
+return Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
 }
