@@ -39,15 +39,16 @@
 
 
   <form id="recipe-form" onsubmit="createRecipe();return false;">
-      Name: <input type="text" id="name" value="{{name}}"><br>
-      Description: <input type="text" id="description" value="{{description}}"><br>
-      Ingredients: <input type="text" id="ingredients" value="{{this}}"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
+      Name: <input type="text" id="name"><br>
+      Description: <input type="text" id="description"><br>
       <h4>Ingredients</h4>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      Ingredients: <input type="text" id="ingredients"><br>
+      
       {{#each ingredients}}
       <input name="ingredients" type="text" value="{{this}}"><br>
       <input type="submit">
