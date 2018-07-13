@@ -24,14 +24,22 @@
       </form>
 
       <script id="recipe-form-template" type="text/x-handlebars-template">
-  <div>
-    <p>{{name}}</p>
-    <p>{{description}}</p>
-    <ul>
-      {{#if ingredients.count}}
-      <li>{{#each ingredients}} Ingredients</li>
-    </ul>
-  </div>
+        <div>
+          <p>{{name}}</p>
+        </div>
+</script>
+<script id="recipe-template" type="text/x-handlebars-template">
+  {{> detailsPartial }}
+</script>
+  <script id="recipe-details-partial" type="text/x-handlebars-template">
+<div>
+  <p>{{name}}</p>
+  <p>{{description}}</p>
+  <ul>
+    {{#if ingredients.count}}
+    <li>{{#each ingredients}} Ingredients</li>
+  </ul>
+</div>
 </script>
     </main>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
