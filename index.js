@@ -33,7 +33,7 @@ function createRecipe() {
 }
 
 function updateRecipe() {
-  var displayEditForm = Handlebars.compile(document.getElementById("display-edit-form").innerHTML);
+  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = recipeTemplate
 
   var name = document.getElementById("name").value
@@ -42,4 +42,10 @@ function updateRecipe() {
   var recipe = {name, ingredients, description}
 
   document.getElementsByTagName("main")[0].innerHTML += template
+}
+
+function displayRecipeForm() {
+  var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  var template = formTemplate
+  return formTemplate
 }
