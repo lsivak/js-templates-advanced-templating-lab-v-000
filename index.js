@@ -4,13 +4,15 @@ function init() {
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = formTemplate
 
-  var name = document.getElementById("name").value
-  var description = document.getElementById("recipeDescription").value
-  var ingredients = document.getElementById("ingredients").value
-  var recipe = {name, ingredients, description}
-
 
   function displayIngredient() {
+    var ingredientsList = []
+for(var i=0; i<issues.length, i++){
+  var result = template(ingredients[i]);
+    document.getElementsByTagName("main")[0].innerHTML
+    r=result
+}
+}
     Handlebars.registerHelper('displayIngredient', function(ingredient) {
        return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
      })
