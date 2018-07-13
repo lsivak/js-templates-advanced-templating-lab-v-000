@@ -44,6 +44,6 @@ function updateRecipe() {
   document.getElementsByTagName("main")[0].innerHTML += template
 }
 
-function displayRecipeForm() {
+function displayEditForm() {
 return Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
 }
