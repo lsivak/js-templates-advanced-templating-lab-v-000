@@ -4,7 +4,7 @@ function init() {
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = formTemplate
 
-
+debugger
   function renderIngredients() {
     Handlebars.registerHelper('displayIngredient', function(ingredient) {
        return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
