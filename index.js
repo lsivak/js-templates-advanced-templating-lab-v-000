@@ -9,7 +9,7 @@ function init() {
   var ingredients = document.getElementById("ingredients").value
   var recipe = {name, ingredients, description}
 
-debugger
+
   function displayIngredient() {
     Handlebars.registerHelper('displayIngredient', function(ingredient) {
        return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
@@ -33,14 +33,14 @@ function createRecipe() {
   var description = document.getElementById("recipeDescription").value
   var ingredients = document.getElementById("ingredients").value
   var recipe = {name, ingredients, description}
-debugger
+
   document.getElementsByTagName("main")[0].innerHTML += template
 }
 
 function updateRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = recipeTemplate
-debugger
+
   var name = document.getElementById("name").value
   var description = document.getElementById("recipeDescription").value
   var ingredients = document.getElementById("ingredients").value
@@ -51,5 +51,5 @@ debugger
 
 function displayEditForm() {
 Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
-debugger
+
 }
