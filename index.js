@@ -3,7 +3,7 @@ function init() {
   //put any page initialization/handlebars initialization here
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = formTemplate
-  
+
 
   function renderIngredients() {
     Handlebars.registerHelper('displayIngredient', function(ingredient) {
