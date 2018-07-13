@@ -1,5 +1,5 @@
 function init() {
-  handlebars()
+
   //put any page initialization/handlebars initialization here
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = formTemplate
@@ -24,7 +24,7 @@ Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-
 function createRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var template = recipeTemplate
-  
+
   var name = document.getElementById("name").value
   var description = document.getElementById("recipeDescription").value
   var ingredients = document.getElementById("ingredients").value
