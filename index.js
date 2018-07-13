@@ -6,8 +6,8 @@ function init() {
 
 
   function displayIngredient() {
-  
-for(var i=0; i<issues.length, i++ {
+
+for(var i=0; i<issues.length, i++ 
   var result = template(ingredients[i]);
     document.getElementsByTagName("main")[0].innerHTML
     r=result
