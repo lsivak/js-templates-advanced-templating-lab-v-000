@@ -17,7 +17,7 @@
       <div>{{>recipe-details-partial}}</div>
         <a href="#" onclick="displayEditForm();">Edit Recipe</a>
       </article>
-
+    </script>
 
     <script id="recipe-details-partial" type="text/x-handlebars-template">
   <div>
@@ -30,7 +30,7 @@
     </ul>
   </div>
   </script>
-    </script>
+
       <script id="recipe-form-template" type="text/x-handlebars-template">
         <form id="recipe-form" onsubmit="{{submitAction}};return false;">
                 {{> recipeFormPartial }}
