@@ -31,3 +31,15 @@ function createRecipe() {
 
   document.getElementsByTagName("main")[0].innerHTML += template
 }
+
+function updateRecipe() {
+  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  var template = recipeTemplate
+
+  var name = document.getElementById("name").value
+  var description = document.getElementById("recipeDescription").value
+  var ingredients = document.getElementById("ingredients").value
+  var recipe = {name, ingredients, description}
+
+  document.getElementsByTagName("main")[0].innerHTML += template
+}
