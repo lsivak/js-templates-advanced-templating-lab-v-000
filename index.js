@@ -26,7 +26,7 @@ function createRecipe() {
   var template = recipeTemplate
 
   var name = document.getElementById("name").value
-  var description = document.getElementById("recipeDescription").value
+  var description = document.getElementById("description").value
   var ingredients = document.getElementById("ingredients").value
   var recipe = {name, ingredients, description}
 
