@@ -33,7 +33,7 @@ function createRecipe() {
 }
 
 function updateRecipe() {
-  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  var displayEditForm = Handlebars.compile(document.getElementById("display-edit-form").innerHTML);
   var template = recipeTemplate
 
   var name = document.getElementById("name").value
