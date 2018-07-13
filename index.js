@@ -10,7 +10,7 @@ function init() {
   var recipe = {name, ingredients, description}
 
 debugger
-  function renderIngredients() {
+  function displayIngredient() {
     Handlebars.registerHelper('displayIngredient', function(ingredient) {
        return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
      })
