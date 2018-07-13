@@ -11,12 +11,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 function handlebars() {
-
-Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("partial-template").innerHTML)
-function renderFormTemplate() {
-  var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  var html = template({description: 'recipeDescription', ingredients: 'ingredients'});
-}
+  Handlebars.registerHelper('showDescription', function(description) {
+     return new Handlebars.SafeString('description="recipeDescription"')
+   })
+  Handlebars.registerHelper('showIngredient', function(ingredient) {
+     return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
+   })
+Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
+Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
 }
 
 function createRecipe() {
