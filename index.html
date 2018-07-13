@@ -10,7 +10,7 @@
     <main id="main">
       <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
       <script src="index.js"></script>
-      
+
       <script id="recipe-template" type="text/x-handlebars-template">
         <article>
         <p>{{name}}</p>
@@ -22,17 +22,18 @@
     <script id="recipe-details-partial" type="text/x-handlebars-template">
   <div>
     <p>{{name}}</p>
-    <p>{{description}}</p>
+    <p id="recipeDescription">{{description}}</p>
     <ul>
-      {{#if ingredients.count}}
-      <li>{{#each ingredients}} Ingredients</li>
+      {{#each ingredients}} 
+      {{ displayIngredient this }}
+     {{/each}}
     </ul>
   </div>
   </script>
 
       <script id="recipe-form-template" type="text/x-handlebars-template">
-        
-        
+
+
 </script>
 
 
