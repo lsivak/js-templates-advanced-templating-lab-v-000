@@ -6,15 +6,9 @@ function init() {
 
 
   function displayIngredient() {
-var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-for(var i=0; i<ingredients.length, i++ 
-  var result = template(ingredients[i]);
-    document.getElementsByTagName("main")[0].innerHTML
-    r=result
-}
-}
+    var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
     Handlebars.registerHelper('displayIngredient', function(ingredient) {
-       return new Handlebars.SafeString('<li name="displayIngredient">' + ingredient + '</li>')
+       return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
      })
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
