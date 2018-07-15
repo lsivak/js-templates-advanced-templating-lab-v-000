@@ -32,38 +32,27 @@
   </div>
   </script>
 
-      <script id="recipe-form-template" type="text/x-handlebars-template">
-        <form id="recipe-form" onsubmit="{{submitAction}};return false;">
-                {{> recipeFormPartial }}
-              </form>
-            </script>
-
-            <script id="recipe-form-partial" type="text/x-handlebars-template">
-          <div>
-            <p id="name">{{name}}</p>
-            <p id="recipeDescription">{{description}}</p>
-            <p id="ingredients"></p>
-            <ul>
-              {{#each ingredients}}
-            <li>  {{ displayIngredient this }} </li>
-             {{/each}}
-            </ul>
-          </div>
-          </script>
-  <form id="recipe-form" onsubmit="createRecipe();return false;">
-      Name: <input type="text" id="name"><br>
-      Description: <input type="text" id="description"><br>
-      <h4>Ingredients</h4>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-
-      <input type="submit">
-    </form>
+  <script id="recipe-form-template" type="text/x-handlebars-template">
+<form id="recipe-form" onsubmit="{{submitAction}};return false;">
+  {{> recipeFormPartial }}
+</form>
 </script>
+<script id="recipe-form-partial" type="text/x-handlebars-template">
+Name: <input id="name" type="text" value="{{name}}"><br>
+Description: <input id="description" type="text" value="{{description}}"><br>
+<h4>Ingredients</h4>
+{{#each ingredients}}
+<input name="ingredients" type="text" value="{{this}}"><br>
+{{else}}
+<input name="ingredients" type="text"><br>
+<input name="ingredients" type="text"><br>
+<input name="ingredients" type="text"><br>
+<input name="ingredients" type="text"><br>
+<input name="ingredients" type="text"><br>
+{{/each}}
+<input type="submit">
+</script>
+
     </main>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
