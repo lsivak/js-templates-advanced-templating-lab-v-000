@@ -14,9 +14,9 @@
       <script id="recipe-template" type="text/x-handlebars-template">
         <article>
         <p>{{name}}</p>
-
+      <div>{{>recipe-details-partial}}</div>
         <a href="#" onclick="displayEditForm();">Edit Recipe</a>
-        <div>{{>recipe-details-partial}}</div>
+        
       </article>
     </script>
 
