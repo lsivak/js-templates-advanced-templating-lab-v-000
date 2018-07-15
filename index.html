@@ -20,6 +20,21 @@
       </article>
     </script>
 
+    
+      <form id="recipe-form" onsubmit="createRecipe();return false;">
+          Name: <input type="text" id="name"><br>
+          Description: <input type="text" id="description"><br>
+          <h4>Ingredients</h4>
+          Ingredients: <input type="text" id="ingredients"><br>
+          Ingredients: <input type="text" id="ingredients"><br>
+          Ingredients: <input type="text" id="ingredients"><br>
+          Ingredients: <input type="text" id="ingredients"><br>
+          Ingredients: <input type="text" id="ingredients"><br>
+          Ingredients: <input type="text" id="ingredients"><br>
+
+          <input type="submit">
+        </form>
+
     <script id="recipe-details-partial" type="text/x-handlebars-template">
   <div>
     <p>{{name}}</p>
@@ -39,19 +54,6 @@
               </form>
             </script>
 
-  <form id="recipe-form" onsubmit="createRecipe();return false;">
-      Name: <input type="text" id="name"><br>
-      Description: <input type="text" id="description"><br>
-      <h4>Ingredients</h4>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-
-      <input type="submit">
-    </form>
 
     <script id="recipe-form-partial" type="text/x-handlebars-template">
 Name: <input id="name" type="text" value="{{name}}"><br>
