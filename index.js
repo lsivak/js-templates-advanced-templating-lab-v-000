@@ -55,6 +55,7 @@ for(var i=0;i<ingredients.length;i++) {
 }
 
 function displayEditForm() {
-Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
+  var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  var template = formTemplate
 
 }
