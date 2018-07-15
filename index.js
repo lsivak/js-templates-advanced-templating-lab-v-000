@@ -4,6 +4,7 @@ function init() {
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = formTemplate
 displayIngredient()
+  document.getElementsByTagName("main")[0].innerHTML = template({'submitAction': 'createRecipe()'})
 }
 
   function displayIngredient() {
