@@ -41,10 +41,10 @@ function updateRecipe() {
   for(var i=0;i<ingredientsNodes.length;i++) {
     ingredients.push(ingredientsNodes[i].innerText)
   }
-}
+
   var recipe = {name, recipeIngredients, description}
 
-return recipe
+
 }
 
 function displayEditForm() {
