@@ -9,7 +9,7 @@ displayIngredient()
 
   function displayIngredient() {
     var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-    Handlebars.registerHelper('displayIngredient', function(ingredient) {
+    Handlebars.registerHelper('displayIngredient', function(ingredients) {
        return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
      })
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
