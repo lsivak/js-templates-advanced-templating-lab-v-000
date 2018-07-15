@@ -14,7 +14,7 @@ displayIngredient()
      })
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
-
+debugger
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
