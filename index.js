@@ -34,7 +34,7 @@ for(var i=0;i<ingredients.length;i++) {
   }
   var recipe = {name, recipeIngredients, description}
 }
-
+return recipe
 }
 
 function updateRecipe() {
