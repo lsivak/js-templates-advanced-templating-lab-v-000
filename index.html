@@ -39,28 +39,27 @@
 
             <script id="recipe-form-partial" type="text/x-handlebars-template">
           <div>
-            Name: <input id="name">{{name}}</p>
-            Description: <input id="recipeDescription">{{description}}</p>
-            Ingredients: <input id="ingredients"></p>
+            Name: <input id="name">{{name}}>
+            Description: <input id="recipeDescription">{{description}}>
+            Ingredients: <input id="ingredients">
+            Ingredients: <input type="text" id="ingredients"><br>
+            Ingredients: <input type="text" id="ingredients"><br>
+            Ingredients: <input type="text" id="ingredients"><br>
+            Ingredients: <input type="text" id="ingredients"><br>
+            Ingredients: <input type="text" id="ingredients"><br>
+            Ingredients: <input type="text" id="ingredients"><br>
             <ul>
               {{#each ingredients}}
             <li>  {{ displayIngredient this }} </li>
              {{/each}}
             </ul>
           </div>
+              <input type="submit">
           </script>
-  <form id="recipe-form" onsubmit="createRecipe();return false;">
-      Name: <input type="text" id="name"><br>
-      Description: <input type="text" id="description"><br>
-      <h4>Ingredients</h4>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
-      Ingredients: <input type="text" id="ingredients"><br>
+  
 
-      <input type="submit">
+
+  
     </form>
 </script>
     </main>
