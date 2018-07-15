@@ -14,7 +14,7 @@ displayIngredient()
      })
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
-debugger
+
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function createRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var template = recipeTemplate
-debugger
+
 
   var name = document.getElementById("name").value
   var description = document.getElementById("description").value
@@ -36,7 +36,7 @@ for(var i=0;i<ingredients.length;i++) {
   }
 }
   var recipe = {name, recipeIngredients, description}
-debugger
+
 return recipe
 }
 
