@@ -29,12 +29,13 @@ function createRecipe() {
   var description = document.getElementById("description").value
   var ingredients = document.getElementById("ingredients").value
   var recipeIngredients = []
-for(var i=0;i<recipeIngredients.length;i++) {
+for(var i=0;i<ingredients.length;i++) {
   if(ingredients[i].value !== "") {
     recipeIngredients.push(ingredients[i].value)
   }
-  var recipe = {name, recipeIngredients, description}
 }
+  var recipe = {name, recipeIngredients, description}
+
 return recipe
 }
 
@@ -50,9 +51,10 @@ for(var i=0;i<ingredients.length;i++) {
   if(ingredients[i].value !== "") {
     recipeIngredients.push(ingredients[i].value)
   }
-  var recipe = {name, recipeIngredients, description}
 }
+  var recipe = {name, recipeIngredients, description}
 
+return recipe
 }
 
 function displayEditForm() {
