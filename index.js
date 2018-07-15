@@ -35,6 +35,7 @@ function createRecipe() {
       recipeIngredients.push(ingredients[i].value)
   }
 }
+debugger
   var recipe = {name, recipeIngredients, description}
 return recipe
 
