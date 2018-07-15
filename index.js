@@ -22,23 +22,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 function createRecipe() {
-  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  var template = recipeTemplate
-
-
-  var name = document.getElementById("name").value
-  var description = document.getElementById("description").value
-  var ingredients = document.getElementById("ingredients").value
-  var recipeIngredients = []
-for(var i=0;i<ingredients.length;i++) {
-  if(ingredients[i].value !== "") {
-    recipeIngredients.push(ingredients[i].value)
+  var name = document.getElementById("name").innerText
+  var description = document.getElementById("description").innerText
+  var ingredientsNodes = document.getElementsByName("ingredientsList")
+  var ingredients = []
+  for(var i=0;i<ingredientsNodes.length;i++) {
+    ingredients.push(ingredientsNodes[i].innerText)
   }
-}
-  var recipe = {name, recipeIngredients, description}
-
-return recipe
-}
 
 function updateRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
