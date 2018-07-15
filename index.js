@@ -29,7 +29,7 @@ function createRecipe() {
   var description = document.getElementById("description").value
   var ingredients = document.getElementById("ingredients").value
   var recipeIngredients = []
-for(var i=0;i<ingredients.length;i++) {
+for(var i=0;i<recipeIngredients.length;i++) {
   if(ingredients[i].value !== "") {
     recipeIngredients.push(ingredients[i].value)
   }
