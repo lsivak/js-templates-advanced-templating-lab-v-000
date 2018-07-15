@@ -38,15 +38,20 @@ for(var i=0;i<ingredients.length;i++) {
 }
 
 function updateRecipe() {
-  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var template = recipeTemplate
 
   var name = document.getElementById("name").value
-  var description = document.getElementById("recipeDescription").value
+  var description = document.getElementById("description").value
   var ingredients = document.getElementById("ingredients").value
-  var recipe = {name, ingredients, description}
+  var recipeIngredients = []
+for(var i=0;i<ingredients.length;i++) {
+  if(ingredients[i].value !== "") {
+    recipeIngredients.push(ingredients[i].value)
+  }
+  var recipe = {name, recipeIngredients, description}
+}
 
-  document.getElementsByTagName("main")[0].innerHTML += template
 }
 
 function displayEditForm() {
