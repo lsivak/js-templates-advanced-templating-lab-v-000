@@ -53,8 +53,6 @@
       <input type="submit">
     </form>
 </script>
-
-
             <script id="recipe-form-partial" type="text/x-handlebars-template">
           <div>
             <p id="name">{{name}}</p>
@@ -62,7 +60,7 @@
             <p id="ingredients">{{ingredients}}</p>
             <ul>
               {{#each ingredients}}
-            <li>  {{ displayIngredient this }} </li>
+            <li>  {{ ingredientsList this }} </li>
              {{/each}}
             </ul>
           </div>
