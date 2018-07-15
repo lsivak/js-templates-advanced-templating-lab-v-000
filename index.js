@@ -3,7 +3,8 @@ function init() {
   //put any page initialization/handlebars initialization here
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   var template = formTemplate
-
+displayIngredient()
+}
 
   function displayIngredient() {
     var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
