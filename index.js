@@ -34,7 +34,7 @@ for(var i=0;i<ingredients.length;i++) {
     recipeIngredients.push(ingredients[i].value)
   }
   var recipe = {name, ingredients, description}
-
+}
 
 }
 
