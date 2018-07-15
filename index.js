@@ -33,7 +33,7 @@ for(var i=0;i<ingredients.length;i++) {
   if(ingredients[i].value !== "") {
     recipeIngredients.push(ingredients[i].value)
   }
-  var recipe = {name, ingredients, description}
+  var recipe = {name, recipeIngredients, description}
 }
 
 }
