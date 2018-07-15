@@ -2,7 +2,7 @@ function init() {
 
   //put any page initialization/handlebars initialization here
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  var template = formTemplate
+    var template = Handlebars.compile(formTemplate)
 displayIngredient()
 
 }
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function createRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  var template = recipeTemplate
+    var template = Handlebars.compile(recipeTemplate)
 
 
   var name = document.getElementById("name").value
