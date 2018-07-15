@@ -28,7 +28,7 @@ function createRecipe() {
 
   var name = document.getElementById("name").value
   var description = document.getElementById("description").value
-  var ingredients = document.getElementsById("ingredients").value
+  var ingredients = document.getElementById("ingredients").value
   var recipeIngredients = []
 for(var i=0;i<ingredients.length;i++) {
   if(ingredients[i].value !== "") {
@@ -46,7 +46,7 @@ function updateRecipe() {
 
   var name = document.getElementById("name").value
   var description = document.getElementById("description").value
-  var ingredients = document.getElementsById("ingredients").value
+  var ingredients = document.getElementById("ingredients").value
   var recipeIngredients = []
 for(var i=0;i<ingredients.length;i++) {
   if(ingredients[i].value !== "") {
