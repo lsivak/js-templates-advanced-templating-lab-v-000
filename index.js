@@ -28,9 +28,14 @@ function createRecipe() {
   var name = document.getElementById("name").value
   var description = document.getElementById("description").value
   var ingredients = document.getElementById("ingredients").value
+  var recipeIngredients = []
+for(var i=0;i<ingredients.length;i++) {
+  if(ingredients[i].value !== "") {
+    recipeIngredients.push(ingredients[i].value)
+  }
   var recipe = {name, ingredients, description}
 
-  document.getElementsByTagName("main")[0].innerHTML += template
+
 }
 
 function updateRecipe() {
