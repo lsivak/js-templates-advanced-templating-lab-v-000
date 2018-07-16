@@ -12,9 +12,6 @@ init()
 
 function createRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-
-
-
   var name = document.getElementById("name").value
 
   var description = document.getElementById("description").value
@@ -25,7 +22,6 @@ function createRecipe() {
       ingredientsList.push(ingredients[i].value)
   }
 }
-
   var recipe = {name, ingredientsList, description}
 return recipe
 
@@ -33,7 +29,6 @@ return recipe
 
 function updateRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-
 
   var name = document.getElementById("name").value
   var description = document.getElementById("description").value
@@ -45,7 +40,6 @@ function updateRecipe() {
   }
 }
   var recipe = {name, ingredientsList, description}
-
 return recipe
 }
 
