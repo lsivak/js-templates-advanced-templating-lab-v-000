@@ -28,7 +28,7 @@ return recipe
 }
 
 function updateRecipe() {
-  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  var recipeForm = Handlebars.compile(document.getElementById("recipe-form").innerHTML);
 
   var name = document.getElementById("name").value
   var description = document.getElementById("description").value
