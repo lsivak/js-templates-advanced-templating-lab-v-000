@@ -10,10 +10,10 @@ displayIngredient()
 function createRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var template = recipeTemplate
-debugger
+
 
   var name = document.getElementById("name").value
-  debugger
+  
   var description = document.getElementById("description").value
   var ingredients = document.getElementsByName("ingredients")
   var ingredientsList = []
@@ -58,7 +58,6 @@ function displayIngredient() {
      return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
    })
 Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
-debugger
 Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
 
 }
