@@ -12,7 +12,7 @@ init()
 
 function createRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  
+
 
 
   var name = document.getElementById("name").value
@@ -33,7 +33,7 @@ return recipe
 
 function updateRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  var template = recipeTemplate
+
 
   var name = document.getElementById("name").value
   var description = document.getElementById("description").value
