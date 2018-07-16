@@ -51,7 +51,7 @@ return recipe
 
 function displayEditForm() {
   var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  var template = formTemplate
+
 
 }
 
