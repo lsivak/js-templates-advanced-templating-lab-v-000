@@ -13,6 +13,7 @@ displayIngredient()
        return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
      })
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
+  debugger
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
 
 }
