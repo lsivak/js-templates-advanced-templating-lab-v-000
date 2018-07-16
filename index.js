@@ -12,7 +12,7 @@ init()
 
 function createRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  var template = recipeTemplate
+  
 
 
   var name = document.getElementById("name").value
@@ -64,4 +64,3 @@ Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("reci
 Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
 
 }
-
