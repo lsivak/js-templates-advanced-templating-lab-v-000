@@ -6,6 +6,9 @@ function init() {
 displayIngredient()
 
 }
+document.addEventListener("DOMContentLoaded", function(event) {
+init()
+})
 
 function createRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
@@ -13,7 +16,7 @@ function createRecipe() {
 
 
   var name = document.getElementById("name").value
-  
+
   var description = document.getElementById("description").value
   var ingredients = document.getElementsByName("ingredients")
   var ingredientsList = []
@@ -61,6 +64,4 @@ Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("reci
 Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
 
 }
-document.addEventListener("DOMContentLoaded", function(event) {
-init()
-})
+
