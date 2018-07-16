@@ -32,15 +32,14 @@
         </form>
 
     <script id="recipe-details-partial" type="text/x-handlebars-template">
-  <div>
-    <p>{{name}}</p>
-    <p id="description">{{description}}</p>
-    <ul>
-      {{#each ingredients}}
-    <li>  {{ displayIngredient this }} </li>
-     {{/each}}
-    </ul>
-  </div>
+      <div id="recipe">
+      <p>{{description}}</p>
+      <ul>
+        {{#each ingredients}}
+        <li>{{name}}</li>
+        {{/each}}
+      </ul>
+    </div>
   </script>
 
       <script id="recipe-form-template" type="text/x-handlebars-template">
