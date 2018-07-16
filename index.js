@@ -27,6 +27,7 @@ function createRecipe() {
 
 
   var name = document.getElementById("name").value
+  debugger
   var description = document.getElementById("description").value
   var ingredients = document.getElementsByName("ingredients")
   var ingredientsList = []
