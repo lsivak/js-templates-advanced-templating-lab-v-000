@@ -19,19 +19,6 @@
       </article>
     </script>
 
-      <form id="recipe-form" onsubmit="createRecipe();return false;">
-          Name: <input type="text" id="name"><br>
-          Description: <input type="text" id="description"><br>
-          <h4>Ingredients</h4>
-          Ingredients: <input type="text" id="ingredients"><br>
-          Ingredients: <input type="text" id="ingredients"><br>
-          Ingredients: <input type="text" id="ingredients"><br>
-          Ingredients: <input type="text" id="ingredients"><br>
-          Ingredients: <input type="text" id="ingredients"><br>
-          Ingredients: <input type="text" id="ingredients"><br>
-          <input type="submit">
-        </form>
-
     <script id="recipe-details-partial" type="text/x-handlebars-template">
       <p id="description">{{description}}</p>
           <ul>
@@ -48,6 +35,19 @@
 
 
     <script id="recipe-form-partial" type="text/x-handlebars-template">
+      
+            <form id="recipe-form" onsubmit="createRecipe();return false;">
+                Name: <input type="text" id="name"><br>
+                Description: <input type="text" id="description"><br>
+                <h4>Ingredients</h4>
+                Ingredients: <input type="text" id="ingredients"><br>
+                Ingredients: <input type="text" id="ingredients"><br>
+                Ingredients: <input type="text" id="ingredients"><br>
+                Ingredients: <input type="text" id="ingredients"><br>
+                Ingredients: <input type="text" id="ingredients"><br>
+                Ingredients: <input type="text" id="ingredients"><br>
+                <input type="submit">
+              </form>
 </script>
     </main>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
