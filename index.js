@@ -7,21 +7,6 @@ displayIngredient()
 
 }
 
-  function displayIngredient() {
-    var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-    Handlebars.registerHelper('displayIngredient', function(ingredient) {
-       return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
-     })
-  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
-  debugger
-  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
-
-}
-document.addEventListener("DOMContentLoaded", function(event) {
-  init()
-})
-
-
 function createRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var template = recipeTemplate
@@ -42,6 +27,20 @@ debugger
 return recipe
 
 }
+
+function displayIngredient() {
+  var formTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  Handlebars.registerHelper('displayIngredient', function(ingredient) {
+     return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
+   })
+Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
+debugger
+Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
+
+}
+document.addEventListener("DOMContentLoaded", function(event) {
+init()
+})
 
 function updateRecipe() {
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
