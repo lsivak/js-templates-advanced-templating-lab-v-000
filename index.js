@@ -22,8 +22,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 function createRecipe() {
-  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  var template = recipeTemplate
+  var recipeTemplate = document.getElementById("recipe-template").innerHTML
+  var template = Handlebars.compile(recipeTemplate)
+  document.getElementById("main").innerHTML = template(recipe)
 
 
   var name = document.getElementById("name").value
