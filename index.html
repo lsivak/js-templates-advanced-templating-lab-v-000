@@ -18,9 +18,7 @@
         <a href="#" onclick="displayEditForm();">Edit Recipe</a>
       </article>
     </script>
-    <form id="recipe-form" onsubmit="createRecipe;return false;">
-            {{> recipeFormPartial }}
-          </form>
+
       <form id="recipe-form" onsubmit="createRecipe();return false;">
           Name: <input type="text" id="name"><br>
           Description: <input type="text" id="description"><br>
