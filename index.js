@@ -29,14 +29,14 @@ function createRecipe() {
   var name = document.getElementById("name").value
   var description = document.getElementById("description").value
   var ingredients = document.getElementsByName("ingredients")
-  var recipeIngredients = []
+  var ingredientsList = []
   for(var i=0;i<ingredients.length;i++) {
     if(ingredients[i].value !== "") {
-      recipeIngredients.push(ingredients[i].value)
+      ingredientsList.push(ingredients[i].value)
   }
 }
 
-  var recipe = {name, recipeIngredients, description}
+  var recipe = {name, ingredientsList, description}
 return recipe
 
 }
@@ -48,13 +48,13 @@ function updateRecipe() {
   var name = document.getElementById("name").value
   var description = document.getElementById("description").value
   var ingredients = document.getElementsByName("ingredients")
-  var recipeIngredients = []
+  var ingredientsList = []
   for(var i=0;i<ingredients.length;i++) {
     if(ingredients[i].value !== "") {
-      recipeIngredients.push(ingredients[i].value)
+      ingredientsList.push(ingredients[i].value)
   }
 }
-  var recipe = {name, recipeIngredients, description}
+  var recipe = {name, ingredientsList, description}
 
 return recipe
 }
